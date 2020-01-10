@@ -6,3 +6,11 @@ a{
 a:hover{
     text-decoration: none;
 }
+
+
+.bouton{
+    border: solid 3px transparent;
+}
+.bouton:hover{
+    border: solid 3px black;
+}
