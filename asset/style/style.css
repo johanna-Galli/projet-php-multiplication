@@ -1,7 +1,8 @@
-
-.bouton {
+a{
+    margin: auto;
+    color: black;
 }
 
-.bouton:hover {
-
+a:hover{
+    text-decoration: none;
 }
