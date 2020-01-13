@@ -113,27 +113,23 @@ include "include/header.php";
     function table($facteur)
     {
         echo '<div class="text-center mx-auto">';
-            echo '<div class="fond">';
+        echo '<div class="fond">';
 
-            echo "Table de $facteur :" . "<br>";
-            for ($a = 1; $a <= 10; $a++) {
-                $result = $facteur * $a;
-                $tableau = array($a => "$facteur x $a = $result");
-                foreach ($tableau as $value) {
-                    echo $value . "<br>";
-                }
+        echo "Table de $facteur :" . "<br>";
+        for ($a = 1; $a <= 10; $a++) {
+            $result = $facteur * $a;
+            $tableau = array($a => "$facteur x $a = $result");
+            foreach ($tableau as $value) {
+                echo $value . "<br>";
             }
-            echo '</div>';
+        }
+        echo '</div>';
         echo '</div>';
     }
-
-    ?>
-
+?>
 </div>
 
+<!--FOOTER-->
+
 <?php
-
-
-//<!--FOOTER-->
-
 include "include/footer.php";
