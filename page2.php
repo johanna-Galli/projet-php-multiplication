@@ -64,68 +64,70 @@ include "include/header.php";
 </form>
 
 
-<div>
+<div class="container d-flex justify-content-between mt-5">
 
-<?php
-
-
-if (isset($_POST['table1'])) {
-    table(1);
-}
-
-if (isset($_POST['table2'])) {
-    table(2);
-}
-
-if (isset($_POST['table3'])) {
-    table(3);
-}
-
-if (isset($_POST['table4'])) {
-    table(4);
-}
-
-if (isset($_POST['table5'])) {
-    table(5);
-}
-
-if (isset($_POST['table6'])) {
-    table(6);
-}
-
-if (isset($_POST['table7'])) {
-    table(7);
-}
-
-if (isset($_POST['table8'])) {
-    table(8);
-}
-
-if (isset($_POST['table9'])) {
-    table(9);
-}
-
-if (isset($_POST['table10'])) {
-    table(10);
-}
+    <?php
 
 
-function table($facteur)
-{
-    echo '<span class="table">';
-    echo "Table de $facteur : <br>";
-    for ($a = 1; $a <= 10; $a++) {
-        $result = $facteur * $a;
-        $tableau = array($a => "$facteur x $a = $result");
-        foreach ($tableau as $value) {
-            echo $value . "<br>";
-        }
+    if (isset($_POST['table1'])) {
+        table(1);
     }
-    echo '</span>';
 
-}
+    if (isset($_POST['table2'])) {
+        table(2);
+    }
 
-?>
+    if (isset($_POST['table3'])) {
+        table(3);
+    }
+
+    if (isset($_POST['table4'])) {
+        table(4);
+    }
+
+    if (isset($_POST['table5'])) {
+        table(5);
+    }
+
+    if (isset($_POST['table6'])) {
+        table(6);
+    }
+
+    if (isset($_POST['table7'])) {
+        table(7);
+    }
+
+    if (isset($_POST['table8'])) {
+        table(8);
+    }
+
+    if (isset($_POST['table9'])) {
+        table(9);
+    }
+
+    if (isset($_POST['table10'])) {
+        table(10);
+    }
+
+
+    function table($facteur)
+    {
+        echo '<div class="text-center mx-auto">';
+            echo '<div class="fond">';
+
+            echo "Table de $facteur :" . "<br>";
+            for ($a = 1; $a <= 10; $a++) {
+                $result = $facteur * $a;
+                $tableau = array($a => "$facteur x $a = $result");
+                foreach ($tableau as $value) {
+                    echo $value . "<br>";
+                }
+            }
+            echo '</div>';
+        echo '</div>';
+    }
+
+    ?>
 
 </div>
 

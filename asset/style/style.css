@@ -16,6 +16,7 @@ a:hover{
     border: solid 3px black;
 }
 
-.table {
-    text-align: center;
+.fond {
+    background-color: cadetblue !important;
+    color: red;
 }
