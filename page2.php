@@ -11,8 +11,7 @@ include "include/header.php";
 
 ?>
 
-<form action="page2" method="post">
-    <fieldset>
+<form action="page2" method="post">  
         <legend class="text-center p-2">Sélectionnez les tables que vous souhaitez apprendre :</legend>
         <div class="text-center p-3">
             <div class="d-inline p-3">
@@ -60,7 +59,6 @@ include "include/header.php";
             <button type="submit">valider</button>
         </div>
         </div>
-    </fieldset>
 </form>
 
 
