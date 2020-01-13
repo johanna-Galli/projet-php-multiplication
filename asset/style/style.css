@@ -11,6 +11,11 @@ a:hover{
 .bouton{
     border: solid 3px transparent;
 }
+
 .bouton:hover{
     border: solid 3px black;
+}
+
+.table {
+    text-align: center;
 }
