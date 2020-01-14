@@ -1,12 +1,19 @@
 <!--HEADER-->
 
 <?php
+
+session_start();
+
+
 $title = "page3";
 
 include "include/header.php";
+
 ?>
 
-<form action="page3" method="post">
+
+
+<form action="page3" method="get">
     <legend class="text-center p-2">Quelle table voulez-vous tester ?</legend>
     <div class="text-center p-3">
         <div class="d-inline p-3">
@@ -51,29 +58,61 @@ include "include/header.php";
 
     <?php
 
+    $goodResult = "";
 
-    if (isset($_POST['table'])) {
-        if(!empty($_POST['table'])){
-            foreach($_POST['table'] as $value) {
-                echo $value;
+    if (isset($_GET['table'])) {
+        if (!empty($_GET['table'])) {
+            foreach ($_GET['table'] as $value) {
             }
         }
-        formTable($value);
+        formTable($value, $goodResult);
     } else {
-       $_POST['table'] = "";
+        $_GET['table'] = "";
     }
 
 
 
-function formTable($facteur){
+    function formTable($facteur)
+    {
+
     ?>
-    <form action="#" method="post">
-        <legend class="text-center p-2">Table de <?php echo $facteur ?></legend>
-    </form>
+        <form action="page3.php" method="post">
+            <legend class="text-center p-2">Table de <?php echo $facteur ?></legend>
+            <div>
+                <?php
+                $rand = rand(1, 10);
+                echo "$facteur x $rand =";
+
+                $_SESSION['goodResult'] = $rand * $facteur;
+
+                var_dump($_SESSION['goodResult']);
+                ?>
+                <input type="text" name="userResult">
+                <input type="submit" value="ok">
+            </div>
+        </form>
     <?php
-}
+
+    }
 
 
+    if (isset($_POST['userResult']) && (!empty($_POST['userResult']))) {
+
+        $_SESSION['userResult'] = $_POST['userResult'];
+        //$userResult = $_POST['userResult'];
+
+        var_dump($_SESSION['userResult']);
+
+        var_dump($_SESSION['goodResult']);
+
+        if ($_SESSION['userResult'] == $_SESSION['goodResult']) {
+            echo "bien joué";
+        } else {
+            echo "réessaye !";
+        }
+    } else {
+        $_POST['userResult'] = "";
+    }
 
     ?>
 </div>

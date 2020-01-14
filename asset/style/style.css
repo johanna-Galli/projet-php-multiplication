@@ -17,6 +17,8 @@ a:hover{
 }
 
 .fond {
-    background-color: cadetblue !important;
-    color: red;
+    background-color: lightgray;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
 }
