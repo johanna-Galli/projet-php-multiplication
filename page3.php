@@ -54,7 +54,7 @@ include "include/header.php";
 
 
 
-<div class="container d-flex justify-content-between mt-5">
+<div class="container d-flex justify-content-center mt-5">
 
     <?php
 
@@ -84,8 +84,6 @@ include "include/header.php";
                 echo "$facteur x $rand =";
 
                 $_SESSION['goodResult'] = $rand * $facteur;
-
-                var_dump($_SESSION['goodResult']);
                 ?>
                 <input type="text" name="userResult">
                 <input type="submit" value="ok">
@@ -99,16 +97,11 @@ include "include/header.php";
     if (isset($_POST['userResult']) && (!empty($_POST['userResult']))) {
 
         $_SESSION['userResult'] = $_POST['userResult'];
-        //$userResult = $_POST['userResult'];
-
-        var_dump($_SESSION['userResult']);
-
-        var_dump($_SESSION['goodResult']);
 
         if ($_SESSION['userResult'] == $_SESSION['goodResult']) {
-            echo "bien joué";
+            echo "BIEN JOUÉ !";
         } else {
-            echo "réessaye !";
+            echo "Dommage ...";
         }
     } else {
         $_POST['userResult'] = "";

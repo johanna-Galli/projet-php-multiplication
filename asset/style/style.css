@@ -19,6 +19,6 @@ a:hover{
 .fond {
     background-color: lightgray;
     color: black;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 5px;
+    border-radius: 5px;
 }
